@@ -1,0 +1,21 @@
+* Centos安装emacs高版本
+** 安装必须库
+1._yum groupinstall "Development Tools"_
+2._yum install gtk+-devel gtk2-devel_
+3._yum install libXpm-devel_
+4._yum install libpng-devel_
+5._yum install giflib-devel_
+6._yum install libtiff-devel libjpeg-devel_
+7._yum install ncurses-devel_
+8._yum install gpm-devel dbus-devel dbus-glib-devel dbus-python_
+9._yum install GConf2-devel pkgconfig_
+10._yum install libXft-devel_
+
+** 下载emacs
+[[http://ftp.gnu.org/pub/gnu/emacs/][emacs ftp地址]]
+
+** 安装emacs
+#tar -zxvf emacs-xx.x.tar.gz
+#cd emacs-xx.x
+#./configure --prefix=/usr/local --with-x-toolkit=gtk
+#make && make install
