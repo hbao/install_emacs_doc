@@ -1,0 +1,12 @@
+* install font in linux
+** make directory
+#mkdir /usr/share/fonts/simsun
+#cp *.ttf /usr/share/fonts/simsun -v
+** modify authority of fonts
+#cd /usr/share/fonts/simsun
+#chmod 755 *.ttf     or #chmod 644 *.ttf
+** build cache of fonts
+#mkfontscale  or #yum install mkfontscale
+#mkfontdir
+#fc-cache -fv or #yum install fontconfig
+#reboot
